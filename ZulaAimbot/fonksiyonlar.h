@@ -91,4 +91,4 @@ DWORD RETES = (ESADDR + 0x8);
 DWORD dxAddr = (DWORD)GetModuleHandleA("d3dx9_42.dll") + 0x4DEB0; // all players
 DWORD RetDX = (dxAddr + 0x5);
 
-// WOX AREA / W4H9LT & UNKNOWN CHEATS / MO1RA
+// Credit: Uc/Mo1ra
