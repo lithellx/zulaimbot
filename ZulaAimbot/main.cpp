@@ -175,4 +175,4 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpvReserved)
 	return TRUE;
 }
 
-// UNKNOWN CHEATS / MO1RA
+// Credit: Uc/Mo1ra
