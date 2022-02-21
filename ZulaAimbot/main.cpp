@@ -19,12 +19,6 @@ HRESULT WINAPI hkPresent(LPDIRECT3DDEVICE9 pDevice, const RECT *a, const RECT *b
 	ScreenCenterX = viewport.Width / 2.0f;
 	ScreenCenterY = viewport.Height / 2.0f;
 
-/*
-		CrossHair(pDevice, Items.d3dcolor8);
-
-		Circle(ScreenCenterX, ScreenCenterY, 60, 60, #COLOR);
-*/
-
 	__asm POPAD;
 	return oPresent(pDevice, a, b, c, d);
 }
