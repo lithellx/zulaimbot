@@ -85,7 +85,7 @@ VOID *DetourCreate(BYTE *src, CONST BYTE *dst, CONST INT len)
 	return(jmp - len);
 }
 
-DWORD ESADDR = (DWORD)GetModuleHandleA("acknex.dll") + 0x41B7A; // endscene // old: acknex.dll + 0x3A74A
+DWORD ESADDR = (DWORD)GetModuleHandleA("acknex.dll") + 0x41B7A; // endscene 2/22/2022 // eski: acknex.dll + 0x3A74A
 DWORD RETES = (ESADDR + 0x8);
 
 DWORD dxAddr = (DWORD)GetModuleHandleA("d3dx9_42.dll") + 0x4DEB0; // all players
