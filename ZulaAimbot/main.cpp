@@ -5,7 +5,7 @@
 #include <fstream>
 #include <detours.h>
 #include <vector>
-#include "fonksiyonlar.h"
+#include "funcs.h"
 
 #pragma comment (lib, "d3dx9.lib")
 #pragma comment (lib, "d3d9.lib")
