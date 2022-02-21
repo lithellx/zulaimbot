@@ -3,9 +3,9 @@
 #include <d3dx9.h>
 #include <iostream>
 #include <fstream>
-#include <detours.h>
 #include <vector>
 #include "funcs.h"
+#include "detours.h"
 
 #pragma comment (lib, "d3dx9.lib")
 #pragma comment (lib, "d3d9.lib")
