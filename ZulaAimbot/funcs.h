@@ -2,16 +2,11 @@
 #pragma warning(disable: 4996)
 bool Create;
 
-LPD3DXLINE	 Line1;
-LPD3DXLINE   Line2;
-LPD3DXLINE   Line3;
+LPD3DXLINE Line1, Line2, Line3;
 D3DVIEWPORT9 viewport;
-float ScreenCenterX;
-float ScreenCenterY;
+float ScreenCenterX, ScreenCenterY;
 
-float AimHhead = 28.0f;
-float AimHbody = 0.0f;
-float AimHlegs = -28.0f;
+float AimHhead = 28.0f, AimHbody = 0.0f, AimHlegs = -28.0f;
 struct ModelPlayer2
 {
 	D3DXVECTOR3 Player;
@@ -23,8 +18,7 @@ float GetDistance(float Xx, float Yy, float xX, float yY)
 {
 	return sqrt((yY - Yy) * (yY - Yy) + (xX - Xx) * (xX - Xx));
 }
-int aimsmooth = 2;
-int aimfov = 60;
+int aimsmooth = 2, aimfov = 60;
 
 #define GWL_WNDPROC         (-4)
 #define HOOK(func,addy)	o##func = (t##func)DetourFunction((PBYTE)addy,(PBYTE)hk##func)
@@ -91,4 +85,22 @@ DWORD RETES = (ESADDR + 0x8); // endscene return 2-22-2022 | endscene + 0x8
 DWORD dxAddr = (DWORD)GetModuleHandleA("d3dx9_42.dll") + 0x4DEB0; // all players
 DWORD RetDX = (dxAddr + 0x5);
 
-// Credit: Uc/Mo1ra
+void Aim(LPDIRECT3DDEVICE9 pDevice, float AimH)
+{
+	D3DXMATRIX projection, view, world;
+	ModelPlayer2* pPlayer = new ModelPlayer2;
+	D3DXVECTOR3 pOut(0, AimH, 0), pV(0, AimH, 0);
+	pDevice->GetViewport(&viewport);
+	pDevice->GetTransform(D3DTS_PROJECTION, &projection);
+	pDevice->GetTransform(D3DTS_VIEW, &view);
+	pDevice->GetTransform(D3DTS_WORLD, &world);
+	D3DXVec3Project(&pOut, &pV, &viewport, &projection, &view, &world);
+	if (pOut.z < 1)
+	{
+		pPlayer->Player.x = pOut.x;
+		pPlayer->Player.y = pOut.y;
+	}
+	cPlayerA.push_back(pPlayer);
+}
+
+// github.com/lithellx - Credit: Uc/Mo1ra
