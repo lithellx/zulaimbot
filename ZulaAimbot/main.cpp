@@ -169,4 +169,4 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpvReserved)
 	return TRUE;
 }
 
-// Credit: Uc/Mo1ra
+// github.com/lithellx - Credit: Uc/Mo1ra
