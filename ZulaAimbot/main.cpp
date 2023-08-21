@@ -81,12 +81,12 @@ _declspec (naked) HRESULT WINAPI playersAll()
 		pushad
 	}
 
-	W2AIM(pDevice, AimHhead);
+	Aim(pDevice, AimHhead);
 
 /*
-	W2AIM(pDevice, AimHbody);
+	Aim(pDevice, AimHbody);
 
-	W2AIM(pDevice, AimHlegs);
+	Aim(pDevice, AimHlegs);
 */
 	__asm
 	{
