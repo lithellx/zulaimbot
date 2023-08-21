@@ -70,24 +70,6 @@ HRESULT WINAPI hkDrawIndexedPrimitive(LPDIRECT3DDEVICE9 pDevice, D3DPRIMITIVETYP
 	return hRet;
 }
 
-void W2AIM(LPDIRECT3DDEVICE9 pDevice, float AimH)
-{
-	D3DXMATRIX projection, view, world;
-	ModelPlayer2 *pPlayer = new ModelPlayer2;
-	D3DXVECTOR3 pOut(0, AimH, 0), pV(0, AimH, 0);
-	pDevice->GetViewport(&viewport);
-	pDevice->GetTransform(D3DTS_PROJECTION, &projection);
-	pDevice->GetTransform(D3DTS_VIEW, &view);
-	pDevice->GetTransform(D3DTS_WORLD, &world);
-	D3DXVec3Project(&pOut, &pV, &viewport, &projection, &view, &world);
-	if (pOut.z < 1)
-	{
-		pPlayer->Player.x = pOut.x;
-		pPlayer->Player.y = pOut.y;
-	}
-	cPlayerA.push_back(pPlayer);
-}
-
 _declspec (naked) HRESULT WINAPI playersAll()
 {
 	static LPDIRECT3DDEVICE9 pDevice;
