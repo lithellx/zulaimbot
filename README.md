@@ -1,7 +1,7 @@
 ## About ZulAimbot
 Simple (D3D9) aimbot project for Zula game.
 
-[![ZulAimbot](https://img.shields.io/github/downloads/lithellx/zulaimbot/total.svg)]()
+[![ZulaAimbot](https://img.shields.io/github/downloads/lithellx/zulaimbot/total?style=for-the-badge&label=RiotLogin%20Downloads&color=red)]()
 
 There is no internal process. Its fully external.
 
