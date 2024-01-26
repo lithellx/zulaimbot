@@ -1,3 +1,7 @@
+## READ HERE BEFORE ASKING ME
+Please do not ask me how to inject the dll into game or how to build the project.
+Research a little bit and you will easily find some documents about it.
+
 ## About ZulAimbot
 Simple (D3D9) aimbot project for Zula game.
 
