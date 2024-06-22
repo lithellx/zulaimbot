@@ -9,5 +9,8 @@ Simple (D3D9) aimbot project for Zula game.
 ## Usage
 Build and inject into Zula. Hold shift to aim.
 
+## Video
+[![Lithe Zulx Aimbot (Source + Release)](https://img.youtube.com/vi/u8v8cPkGhDQ/0.jpg)](https://www.youtube.com/watch?v=u8v8cPkGhDQ)
+
 ## Authors
 [lithellx](https://github.com/lithellx)
